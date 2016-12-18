@@ -5,6 +5,9 @@ import fr.zomdev.naturalstuff.references.Reference;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
  * Created by ZomDev on 18/12/2016.
@@ -19,17 +22,17 @@ public class NaturalStuff {
     public static CommonProxy proxy;
 
     @EventHandler
-    public void preInit() {
+    public void preInit(FMLPreInitializationEvent e) {
         proxy.preInit();
     }
 
     @EventHandler
-    public void init() {
+    public void init(FMLInitializationEvent e) {
         proxy.init();
     }
 
     @EventHandler
-    public void postInit() {
+    public void postInit(FMLPostInitializationEvent e) {
         proxy.postInit();
     }
 }

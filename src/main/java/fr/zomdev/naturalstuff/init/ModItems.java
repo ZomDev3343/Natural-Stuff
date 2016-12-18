@@ -16,10 +16,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * Created by ZomDev on 18/12/2016.
  */
 public class ModItems {
+    public static Item earthGem, waterGem, fireGem, airGem;
 
     // Item Declarations
 
-    public static Item earthGem, waterGem, fireGem, airGem;
+    public ModItems() {
+        init();
+        registers();
+        registerRenders();
+    }
 
     // Items Initialization
     private void init(){
@@ -33,12 +38,18 @@ public class ModItems {
     // Items Registering
     private void registers(){
         register(earthGem);
+        register(waterGem);
+        register(fireGem);
+        register(airGem);
     }
 
     // Item Renders
     @SideOnly(Side.CLIENT)
     private void registerRenders(){
         registerRender(earthGem, 0);
+        registerRender(waterGem, 0);
+        registerRender(fireGem, 0);
+        registerRender(airGem, 0);
     }
 
     /*---------------------------------------------------------------------------------------------------------------*/
