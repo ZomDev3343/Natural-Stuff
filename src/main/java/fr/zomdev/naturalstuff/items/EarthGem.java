@@ -14,5 +14,4 @@ public class EarthGem extends NSItem {
         super(Names.Items.EarthGem, CreativeTabs.MATERIALS);
     }
 
-
 }
