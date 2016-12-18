@@ -13,10 +13,11 @@ import java.util.List;
 
 public class AirGem extends NSItem {
 
-    public static String[] subTypes = {"empty", "filled"};
+    public static String[] subTypes = new String[]{"empty", "filled"};
 
     public AirGem() {
         super(Names.Items.AirGem, CreativeTabs.MATERIALS);
+        setHasSubtypes(true);
     }
 
     @Override
@@ -28,7 +29,13 @@ public class AirGem extends NSItem {
 
     @Override
     public int getMetadata(ItemStack stack) {
-        return stack.getItemDamage();
+
+        int metadata = stack.getItemDamage();
+
+        if (metadata < 0 || metadata > subTypes.length) {
+            metadata = 0;
+        }
+        return metadata;
     }
 
     @Override

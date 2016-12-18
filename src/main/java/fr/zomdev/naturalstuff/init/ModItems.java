@@ -7,6 +7,7 @@ import fr.zomdev.naturalstuff.items.WaterGem;
 import fr.zomdev.naturalstuff.references.Reference;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -49,7 +50,8 @@ public class ModItems {
         registerRender(earthGem, 0);
         registerRender(waterGem, 0);
         registerRender(fireGem, 0);
-        registerRender(airGem, 0);
+        registerRenderMeta(airGem, 0, "empty");
+        registerRenderMeta(airGem, 1, "filled");
     }
 
     /*---------------------------------------------------------------------------------------------------------------*/
@@ -60,6 +62,10 @@ public class ModItems {
     }
 
     private void registerRender(Item item, int meta){
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
+    }
+
+    private void registerRenderMeta(Item item, int meta, String metaDiff) {
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5) + "." + metaDiff), "inventory"));
     }
 }

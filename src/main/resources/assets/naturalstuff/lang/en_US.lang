@@ -1,0 +1,5 @@
+item.earthGem.name=Earth Gem
+item.waterGem.name=Water Gem
+item.fireGem.name=Fire Gem
+item.airGem.empty.name=Air Gem (Empty)
+item.airGem.filled.name=Air Gem (Filled)
