@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "naturalstuff:items/airGem/empty"
+    "layer0": "naturalstuff:items/gems/airGem/ag.ety"
   }
 }

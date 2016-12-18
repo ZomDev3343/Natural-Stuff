@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "naturalstuff",
+  "name": "Natural Stuff",
+  "description": "A mod that includes some NA-TU-RALS features !",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["ZomDev"],
+  "credits": "Myself",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
