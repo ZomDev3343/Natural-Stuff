@@ -120,31 +120,31 @@ public class ModItems {
     @SideOnly(Side.CLIENT)
     private void registerRenders(){
 
-        registerRender(earthGem, 0);
-        registerRender(waterGem, 0);
-        registerRender(fireGem, 0);
+        registerRender(earthGem, 0, "gems");
+        registerRender(waterGem, 0, "gems");
+        registerRender(fireGem, 0, "gems");
         registerRenderMeta(airGem, 0, "empty");
         registerRenderMeta(airGem, 1, "filled");
 
-        registerRender(earthHelmet, 0);
-        registerRender(earthChestplate, 0);
-        registerRender(earthLeggings, 0);
-        registerRender(earthBoots, 0);
+        registerRender(earthHelmet, 0, "armors/earth");
+        registerRender(earthChestplate, 0, "armors/earth");
+        registerRender(earthLeggings, 0, "armors/earth");
+        registerRender(earthBoots, 0, "armors/earth");
 
-        registerRender(waterHelmet, 0);
-        registerRender(waterChestplate, 0);
-        registerRender(waterLeggings, 0);
-        registerRender(waterBoots, 0);
+        registerRender(waterHelmet, 0, "armors/water");
+        registerRender(waterChestplate, 0, "armors/water");
+        registerRender(waterLeggings, 0, "armors/water");
+        registerRender(waterBoots, 0, "armors/water");
 
-        registerRender(fireHelmet, 0);
-        registerRender(fireChestplate, 0);
-        registerRender(fireLeggings, 0);
-        registerRender(fireBoots, 0);
+        registerRender(fireHelmet, 0, "armors/fire");
+        registerRender(fireChestplate, 0, "armors/fire");
+        registerRender(fireLeggings, 0, "armors/fire");
+        registerRender(fireBoots, 0, "armors/fire");
 
-        registerRender(airHelmet, 0);
-        registerRender(airChestplate, 0);
-        registerRender(airLeggings, 0);
-        registerRender(airBoots, 0);
+        registerRender(airHelmet, 0, "armors/air");
+        registerRender(airChestplate, 0, "armors/air");
+        registerRender(airLeggings, 0, "armors/air");
+        registerRender(airBoots, 0, "armors/air");
 
     }
 
@@ -155,8 +155,8 @@ public class ModItems {
         GameRegistry.register(item);
     }
 
-    private void registerRender(Item item, int meta){
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
+    private void registerRender(Item item, int meta, String path) {
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, "/" + path + "/" + item.getUnlocalizedName().substring(5)), "inventory"));
     }
 
     private void registerRenderMeta(Item item, int meta, String metaDiff) {
