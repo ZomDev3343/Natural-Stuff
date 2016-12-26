@@ -15,6 +15,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class NaturalStuff {
 
+    //TODO Armures, Outils, Blocks Naturels
+
     @Mod.Instance(Reference.MODID)
     public static NaturalStuff instance;
 
