@@ -123,8 +123,8 @@ public class ModItems {
         registerRender(earthGem, 0, "gems");
         registerRender(waterGem, 0, "gems");
         registerRender(fireGem, 0, "gems");
-        registerRenderMeta(airGem, 0, "empty");
-        registerRenderMeta(airGem, 1, "filled");
+        registerRenderMeta(airGem, 0, "gems", "empty");
+        registerRenderMeta(airGem, 1, "gems", "filled");
 
         registerRender(earthHelmet, 0, "armors/earth");
         registerRender(earthChestplate, 0, "armors/earth");
@@ -159,7 +159,7 @@ public class ModItems {
         ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, "/" + path + "/" + item.getUnlocalizedName().substring(5)), "inventory"));
     }
 
-    private void registerRenderMeta(Item item, int meta, String metaDiff) {
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5) + "." + metaDiff), "inventory"));
+    private void registerRenderMeta(Item item, int meta, String path, String metaDiff) {
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, "/" + path + "/" + item.getUnlocalizedName().substring(5) + "." + metaDiff), "inventory"));
     }
 }

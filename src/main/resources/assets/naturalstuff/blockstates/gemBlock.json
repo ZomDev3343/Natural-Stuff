@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "gems=EARTHBLOCK": {
+      "model": "naturalstuff:gemsBlocks/earth"
+    },
+    "gems=WATERBLOCK": {
+      "model": "naturalstuff:gemsBlocks/water"
+    },
+    "gems=FIREBLOCK": {
+      "model": "naturalstuff:gemsBlocks/fire"
+    },
+    "gems=AIRBLOCK": {
+      "model": "naturalstuff:gemsBlocks/air"
+    }
+  }
+}
