@@ -32,7 +32,7 @@ public enum GemBlocksEnumType implements IStringSerializable {
 
     public static GemBlocksEnumType getStateFromMeta(int metadata) {
 
-        if (metadata < 0 || metadata >= metas.length) {
+        if (metadata < 0 || metadata > metas.length) {
             metadata = 0;
         }
 

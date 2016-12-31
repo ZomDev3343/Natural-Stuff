@@ -10,6 +10,8 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created by ZomDev on 29/12/2016.
@@ -33,6 +35,7 @@ public class ModBlocks {
         register(gemBlock);
     }
 
+    @SideOnly(Side.CLIENT)
     private void registerRenders() {
         registerRender(gemBlock, 0, "gemsBlock/earth");
         registerRender(gemBlock, 1, "gemsBlock/water");

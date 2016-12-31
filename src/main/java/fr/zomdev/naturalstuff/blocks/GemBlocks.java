@@ -32,6 +32,11 @@ public class GemBlocks extends NSBlock {
         return ((GemBlocksEnumType) state.getValue(VARIANTS)).getMeta();
     }
 
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return this.getDefaultState().withProperty(VARIANTS, GemBlocksEnumType.getStateFromMeta(meta));
+    }
+
     @SideOnly(Side.CLIENT)
     @Override
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
@@ -46,6 +51,11 @@ public class GemBlocks extends NSBlock {
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, new IProperty[]{VARIANTS});
+    }
+
+    @Override
+    public int damageDropped(IBlockState state) {
+        return ((GemBlocksEnumType) state.getValue(VARIANTS)).getMeta();
     }
 
     public String getUnlocalizedName(int metadata) {

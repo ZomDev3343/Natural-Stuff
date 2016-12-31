@@ -13,14 +13,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CraftingHandler {
 
     public static void registerRecipes() {
-        makeBlockRecipe(ModBlocks.gemBlock, ModItems.earthGem, 0);
-        makeBlockRecipe(ModBlocks.gemBlock, ModItems.waterGem, 1);
-        makeBlockRecipe(ModBlocks.gemBlock, ModItems.fireGem, 2);
-        makeBlockRecipe(ModBlocks.gemBlock, ModItems.airGem, 3);
+        makeBlockRecipe(ModBlocks.gemBlock, ModItems.earthGem, 0, 0);
+        makeBlockRecipe(ModBlocks.gemBlock, ModItems.waterGem, 1, 0);
+        makeBlockRecipe(ModBlocks.gemBlock, ModItems.fireGem, 2, 0);
+        makeBlockRecipe(ModBlocks.gemBlock, ModItems.airGem, 3, 1);
 
     }
 
-    private static void makeBlockRecipe(Block block, Item item, int metaBlock) {
-        GameRegistry.addRecipe(new ItemStack(Item.getItemFromBlock(block), 1, metaBlock), new Object[]{"III", "III", "III", 'I', new ItemStack(item)});
+    private static void makeBlockRecipe(Block block, Item item, int metaBlock, int metaItem) {
+        GameRegistry.addRecipe(new ItemStack(Item.getItemFromBlock(block), 1, metaBlock), new Object[]{"III", "III", "III", 'I', new ItemStack(item, 1, metaItem)});
     }
 }

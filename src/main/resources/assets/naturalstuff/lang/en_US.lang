@@ -3,3 +3,28 @@ item.waterGem.name=Water Gem
 item.fireGem.name=Fire Gem
 item.airGem.empty.name=Air Gem (Empty)
 item.airGem.filled.name=Air Gem (Filled)
+
+item.earthHelmet.name=Earth Helmet
+item.earthChestplate.name=Earth Chestplate
+item.earthLeggings.name=Earth Leggings
+item.earthBoots.name=Earth Boots
+
+item.waterHelmet.name=Water Helmet
+item.waterChestplate.name=Water Chestplate
+item.waterLeggings.name=Water Leggings
+item.waterBoots.name=Water Boots
+
+item.fireHelmet.name=Fire Helmet
+item.fireChestplate.name=Fire Chestplate
+item.fireLeggings.name=Fire Leggings
+item.fireBoots.name=Fire Boots
+
+item.airHelmet.name=Air Helmet
+item.airChestplate.name=Air Chestplate
+item.airLeggings.name=Air Leggings
+item.airBoots.name=Air Boots
+
+tile.gemBlock.earth.name=EarthGem Block
+tile.gemBlock.water.name=WaterGem Block
+tile.gemBlock.fire.name=FireGem Block
+tile.gemBlock.air.name=AirGem Block
